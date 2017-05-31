@@ -221,7 +221,7 @@ sSina.imgslide_3d = function(){
                     $(".b_tit",$this).stop();
                     if(settings.hasP && !$(".b_tit",$this).is(":animated")){
                         $(".b_tit",$this).animate({
-                            "bottom":-120+"px"
+                            "bottom":-180+"px"
                         },300,"linear")
                     }
                 }
