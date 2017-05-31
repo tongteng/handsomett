@@ -120,10 +120,12 @@ li{list-style:none;}
 
 .bgitemsup{
     position: relative;
+    border: 2px solid #fff;
 }
 
 .bgitemsdown{
     position: relative;
+    border: 2px solid #fff;
 }
 
 .txt{
