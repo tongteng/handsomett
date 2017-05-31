@@ -105,3 +105,39 @@ li{list-style:none;}
     right: 30px;
     top: 50px;
 }
+
+.page .pagebg{
+    height: 100%;
+    width: 100%;
+}
+
+
+.page .pagebg .bgitems{
+    height: 100%;
+    float: left;
+    width: 25% !important;
+}
+
+.bgitemsup{
+    position: relative;
+}
+
+.bgitemsdown{
+    position: relative;
+}
+
+.txt{
+    font: candara;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
