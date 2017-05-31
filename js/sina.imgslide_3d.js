@@ -41,6 +41,10 @@ sSina.imgslide_3d = function(){
             // 大图li对象
             var $bigLi = $("li",$bigImg);
 
+            var $bigimg = $('img', $bigLi);
+
+            var $bigmask = $('div', $bigLi);
+
             // 大图li个数
             var bigliLen = $bigLi.length;        
 
@@ -62,6 +66,10 @@ sSina.imgslide_3d = function(){
                         $(".slidemask",$eachLi).addClass("maskcur");
                     }
                 }
+                $bigimg.css({'opacity': 1});
+                $bigLi.css({'border': '3px solid #000'});
+                $bigmask.css({'opacity': 0.7})
+
             }
             // 初始化
             init();       
@@ -221,7 +229,7 @@ sSina.imgslide_3d = function(){
                     $(".b_tit",$this).stop();
                     if(settings.hasP && !$(".b_tit",$this).is(":animated")){
                         $(".b_tit",$this).animate({
-                            "bottom":-180+"px"
+                            "bottom":-190+"px"
                         },300,"linear")
                     }
                 }
