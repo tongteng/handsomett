@@ -1,0 +1,107 @@
+html,body, ul, li, p, form, span, em, img, div, input, strong, h6, form, h1, h2, h3{margin:0;padding:0;} 
+
+html,body{font-size:12px;line-height:1.33em; overflow-y:hidden;color:#fff;}    
+img{border:none;}    
+div{zoom:1;}      
+li{list-style:none;}  
+.cf:after{height:0;clear:both;visibility:hidden;content:"";display:block;}
+.indexpage .main
+{
+    margin:0 auto;
+    width:1920px;
+    height:100%;
+}
+
+.indexpage .mainl,.indexpage .mainc,.indexpage .mainr
+{
+    float: left;
+    height:100%;
+}
+
+.indexpage .mainl{width:775px;position:relative; }
+
+.indexpage .mainc{width:945px; overflow:hidden;position:relative;}
+.indexpage .pagecontainer
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.indexpage .mainc .page
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.indexpage .page img{vertical-align:middle;}
+
+.indexpage .mainr{width:200px;position:fixed;right:0;top:0;}
+.mainr .pagenav{width:100%;position:absolute;left:50%;top:0;}
+.mainr a,.mainr .dotted {display: block;width: 10px;height: 10px;font-size:30px;line-height:30px; cursor:pointer;background:url(about:blank);}
+.mainr a,.mainr a:active,.mainr a:hover,.mainr a:link,.mainr a:visited{ padding: 8px; text-decoration:none;}
+.mainr .dotted {border: 1px #cccccc solid;position: relative;display: block;border-radius:50%; -webkit-transition: all 500ms ease;-o-transition: all 500ms ease;-moz-transition: all 500ms ease;-ms-transition: all 500ms ease; transition: all 500ms ease;}
+.mainr .cur .dotted {border-color: #0cf; background-color:#0cf !important;}
+
+
+.indexpage .curli{position:absolute;top:50%;height:60px;margin-top:-65px;width:100%;}
+.indexpage .mainl .car{margin-top:150px;margin-left: 90px;}
+.indexpage .mainl .logo{position:absolute;left:0;top:0;}
+
+.indexpage .pagecontainer .page{ overflow:hidden;}
+
+.xzContent{
+    position:absolute;
+    top:50%;
+    margin-top:-200px;
+    left:150px;
+}
+
+
+.poppage .main
+{
+    margin:0 auto;
+    width:100%;
+}
+        
+.poppage .mainl,.poppage .mainc,.poppage .mainr
+{
+    float: left;
+    height:100%;
+    z-index:2;
+}
+        
+.poppage .mainl{width:100px; position:fixed;}
+        
+.poppage .mainc{width:100%; overflow:hidden;position:relative;}   
+.poppage .pagecontainer
+{
+    position: absolute;            
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+        
+.poppage .mainc .page
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+        
+.poppage .page img{vertical-align:middle;}
+        
+.poppage .mainr{width:200px;position:fixed;right:0;top:0;}
+
+.poppage .curli{position:absolute;top:50%;height:60px;margin-top:-65px;width:100%;}
+
+.leftLogo{
+   position: absolute;
+    right: 30px;
+    top: 50px;
+}
