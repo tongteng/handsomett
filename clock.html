@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时钟</title>
+</head>
+<body>
+
+
+	<style type="text/css">
+		.box{
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			width: 500px;
+			height: 500px;
+			border: 8px solid rgba(253,218,4,1);
+			border-radius: 50%;
+			background-color: rgba(178,200,187,1);
+			font-family: Candara;
+		}
+
+		.timenum{
+			width: 500px;
+			height: 500px;
+			position:absolute;
+		}
+
+		.timenum div{
+			width: 30px;
+			height: 500px;
+			position: absolute;
+			left: 235px;
+			font-size: 22px;
+			color: #fff;
+			font-weight: bold;
+		}
+
+		.timenum div span{
+			display: block;
+			position: absolute;
+			top: 15px;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+		}
+
+		.center{
+			width: 15px;
+			height: 15px;
+			background-color: black;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+
+		.hour{
+			width: 10px;
+			height: 500px;
+			/*background-color: red;*/
+			position: absolute;
+			left: 50%;
+			margin-left: -5px;
+		}
+
+		.hour span{
+			width: 10px;
+			height: 120px;
+			display: block;
+			background-color: red;
+			position: absolute;
+			top: 130px;
+		}
+
+		.minute{
+			width: 8px;
+			height: 500px;
+			position: absolute;
+			left: 50%;
+			margin-left: -4px;
+		}
+
+		.minute span{
+			display: block;
+			width: 8px;
+			height: 160px;
+			background-color: #f60;
+			position: absolute;
+			top: 90px;
+		}
+
+		.second{
+			width: 6px;
+			height: 500px;
+			position: absolute;
+			left: 50%;
+			margin-left: -3px;
+		}
+
+		.second span{
+			width: 6px;
+			height: 200px;
+			background-color: black;
+			display: block;
+			position: absolute;
+			top: 50px;
+		}
+
+		.kedu div{
+			width: 4px;
+			height: 500px;
+			position: absolute;
+			left: 248px;
+		}
+
+		.kedu div span{
+			width: 4px;
+			height: 8px;
+			position: absolute;
+			background-color: black;
+		}
+
+	</style>
+
+	
+	<div class="box">
+		<div class="timenum">
+			<div><span>12</span></div>
+			<div><span>1</span></div>
+			<div><span>2</span></div>
+			<div><span>3</span></div>
+			<div><span>4</span></div>
+			<div><span>5</span></div>
+			<div><span>6</span></div>
+			<div><span>7</span></div>
+			<div><span>8</span></div>
+			<div><span>9</span></div>
+			<div><span>10</span></div>
+			<div><span>11</span></div>
+		</div>
+
+		<div class="kedu">
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+			<div><span></span></div>
+		</div>
+		<div class="hour"><span></span></div>
+		<div class="minute"><span></span></div>
+		<div class="second"><span></span></div>
+
+
+		<div class="center"></div>
+	</div>
+
+
+
+	<div class="test"></div>
+
+
+	<script type="text/javascript">
+
+		var box = document.getElementsByClassName('box')[0];
+		box.addEventListener('mousemove', function(e) {
+			cancelHandle(e);
+		},false);
+		box.addEventListener('mousedown', function(e) {
+			cancelHandle(e);
+		},false);
+		box.addEventListener('contextmenu', function(e) {
+			cancelHandle(e);
+		},false)
+
+		function cancelHandle(e) {
+			if(e.preventDefault) {
+				e.preventDefault();
+			}else if(e.returnValue) {
+				e.returnValue = false;
+			}else{
+				return false;
+			}
+		}
+
+
+		var timenum = document.querySelectorAll('.timenum div');
+		var len = timenum.length;
+		var kedu = document.querySelectorAll('.kedu div');
+		var kedulen = kedu.length;
+
+		for(var j = 0; j < kedulen; j ++ ) {
+			if(j % 5 === 0) {
+				kedu[j].firstChild.style.height = '14px';
+			}
+			kedu[j].style.transform = 'rotate(' + j * 6 + 'deg)';
+		}
+
+		for(var i = 0; i < len; i ++ ){
+			timenum[i].style.transform = 'rotate(' + i * 30 + 'deg)';
+			timenum[i].firstChild.style.transform = 'rotate(' + (-i * 30) + 'deg)';
+		}
+
+		
+		function init(){
+			var $hour = document.getElementsByClassName('hour')[0];
+			var $second = document.getElementsByClassName('second')[0];
+			var $minute = document.getElementsByClassName('minute')[0];
+			var date = new Date();
+			var nowHour = date.getHours(),
+				nowMinute = date.getMinutes(),
+				nowSecond = date.getSeconds();
+			nowHour = nowHour == 12 ? 0 : nowHour > 12 ? nowHour - 12 : nowHour;
+			var hourA = nowHour * 30 + nowMinute / 2 + nowSecond / 120;
+			var minuteA = nowMinute * 6 + nowSecond / 10;
+			var secondA = nowSecond * 6;
+			$hour.style.transform = 'rotate(' + hourA + 'deg)';
+			$minute.style.transform = 'rotate(' + minuteA + 'deg)';
+			$second.style.transform = 'rotate(' + secondA + 'deg)';
+		}
+
+		init();
+
+		var timer = setInterval(function() {
+			init();
+		}, 1000);
+
+		
+
+
+	</script>
+
+</body>
+</html>

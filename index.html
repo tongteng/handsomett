@@ -32,28 +32,6 @@
 
     <script src='js/jquery.js' type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
-    <script src="http://all.vic.sina.com.cn/hdcommon/js/jquery/jquery1.6.4.min.js"></script>
-    <script data='jscrunth' src='http://all.vic.sina.com.cn/hdcommon/js/sina.pc.common.0.1.min.js' type='text/javascript'></script>
-    <script data='jscrunth' src='js/sina.pcmove.js' type='text/javascript'></script>
-    <script data='jscrunth' src='js/sina.fullscroll.js' type='text/javascript'></script>
-    <script>
-	    $(function() {
-	        // 全屏滚动功能
-	        $.s_fullScroll.init({
-	            "picMaxW": 1920, // 全屏图片的原始宽度
-	            "picMaxH": 1080 // 全屏图片的原始高度
-	        });
-	        // 对于pad和没有鼠标的设备
-	        $("#indexpage").pcMove({
-	            "upFun": function() {
-	                $.s_fullScroll.pageUpOrDown("up");
-	            },
-	            "downFun": function() {
-	                $.s_fullScroll.pageUpOrDown("down");
-	            }
-	        });
-	    })
-    </script>
 </body>
 
 </html>
