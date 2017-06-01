@@ -8,6 +8,11 @@
 
 
 	<style type="text/css">
+		body,html{
+			width: 100%;
+			height: 100%;
+		}
+
 		.box{
 			position: absolute;
 			left: 0;
@@ -217,20 +222,18 @@
 	</div>
 
 
-
-	<div class="test"></div>
-
-
 	<script type="text/javascript">
 
-		var box = document.getElementsByClassName('box')[0];
-		box.addEventListener('mousemove', function(e) {
+		var body = document.getElementsByTagName('body')[0];
+		console.log(body);
+
+		body.addEventListener('mousemove', function(e) {
 			cancelHandle(e);
 		},false);
-		box.addEventListener('mousedown', function(e) {
+		body.addEventListener('mousedown', function(e) {
 			cancelHandle(e);
 		},false);
-		box.addEventListener('contextmenu', function(e) {
+		body.addEventListener('contextmenu', function(e) {
 			cancelHandle(e);
 		},false)
 
