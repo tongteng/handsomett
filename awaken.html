@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>移动端打开QQ浏览器</title>
+<style type="text/css">
+    body,html{margin:0;padding:0;width:640px;}
+    div{margin:0 auto;text-align:center;}
+    input{height:50px;font-size:25px;line-height:50px;margin:15px;}
+</style>
+</head>
+<body>
+    <div>
+        <input onclick="openQQWithJs()" type="button" value="js通过移动端app程序名(qq的schema)唤起QQ不兼容微信"/><br />
+        <input onclick="openQQWithHttp()" type="button" value="js通过http唤起QQ兼容微信"/>
+    </div>
+    <script type="text/javascript">
+        // 注意事项:
+        // 微博内嵌的浏览器是不能打开的
+        // 1. 如果你本地没有安装QQ，那就不能启动会话
+        // 2. 如果你没有登录，这时会自动启动QQ进程，让你登录，登录后自动打开聊天对话框
+        // 3. 如果对方的安全设置-》身份验证设置为“允许任何人”，那么会话窗口将直接打开，
+        //    否则会显示“您需要添加对方为好友，才能给对方发送会话消息”。所以企业咨询QQ最好将身份验证设置为“允许任何人”，才能更好的为客户服务。      
+        function openQQWithJs(){
+            // 如下方法适用如下APP
+            // QQ内嵌浏览器，QQ浏览器,Android自带浏览器,以及其他第三方的浏览器
+            // 不适用微信内嵌浏览器,微博内嵌浏览器等app内嵌浏览器
+            // android
+            // web_src表示来源
+            location.href = "mqqwpa://im/chat?chat_type=wpa&uin=393953700&src_type=web&web_src="+"weibo";
+            // IOS
+            //location.href = "mqq://im/chat?chat_type=wpa&uin=393953700&version=1&src_type=web";
+        }
+
+        function openQQWithHttp(){
+            // 如下方法适用如下APP
+            // QQ内嵌浏览器，QQ浏览器,Android自带浏览器,以及其他第三方的浏览器,微信内嵌浏览器
+            // 不适用微博内嵌浏览器等app内嵌浏览器(因为被微博拦截了)
+            location.href = "http://wpa.qq.com/msgrd?v=3&uin=43204370&site=qq&menu=yes&web_src=weibo";
+        }
+
+//        function openQQInWeibo(){
+////            try{
+////                var ifr = $('<iframe id="ifr"></iframe>')
+////                ifr.attr('src', 'mqqwpa://im/chat?chat_type=wpa&uin=393953700');
+////                $('body').append(ifr);
+////            }catch(e){
+//                var ifr = $('<iframe id="ifr"></iframe>');
+//                ifr.attr('src', 'mqq://im/chat?chat_type=wpa&uin=393953700&version=1&src_type=web');
+//                $('body').append(ifr);
+//            //}
+//        }
+    </script>
+</body>
+</html>
